@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Snake</title>
+    <style type="text/css">
+    #snake{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+        z-index: 10;
+    }
+    #title{
+        font-size: 15pt;
+        color: red;
+    }
+    #food{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 400px;
+        top: 200px;
+        background: green;
+    }
+    #wall{
+        width: 1500px;
+        height: 800px;
+        border: 2px solid red;
+        position: relative;
+    }
+    #table{
+        border-style: none;
+        position: absolute;
+    }
+    input{
+        width: 80px;
+        height: 30px;
+        font-size: 12pt;
+    }
+    select{
+        font-size: 12pt;
+        height: 30px;
+    }
+    #bonus{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgb(112, 2, 2);
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        font-size: 15pt;
+        color: white;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <input type="button" value="继续" id="cont" disabled="true"/>
+    <input type="button" value="暂停" id="pause"/>
+    <input type="button" value="重新开始" id="restart"/>&nbsp;&nbsp;&nbsp;&nbsp;速度：
+    <select id="speed">
+        <option value="800">慢</option>
+        <option value="500" selected="selected">中</option>
+        <option value="200">快</option>
+        <option value="50">超快</option>
+    </select>
+    <p id="title">按WASD或方向键移动&nbsp;&nbsp;&nbsp;分数：<span id="span1">0</span>&nbsp;&nbsp;&nbsp;</p>
+    <div id="wall">
+        <table id="table" border="0" cellpadding="0" cellspacing="0"></table>
+        <div id="snake"></div>
+        <div id="food"></div>
+        <div id="bonus"></div>
+    </div>
+<script type="text/javascript" src="js/snake.js"></script>
+</body>
+</html>
